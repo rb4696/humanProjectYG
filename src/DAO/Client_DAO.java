@@ -86,17 +86,17 @@ public class Client_DAO {
 				ppst.setString(1, id);
 				ppst.setString(2, name);
 				ppst.setString(3, phone);
-				ppst.setString(1, grade);
+				ppst.setString(4, grade);
 				ppst.execute();
+				System.out.println("가입이 완료되었습니다.");
 			} catch (Exception e) {
-				// TODO: handle exception
+				System.out.println("가입이 불가합니다.");
 			} finally {
 				try {
 					if (ppst != null)
 						ppst.close();
 					if (conn != null)
 						conn.close();
-					// System.out.println("DB연결을 종료합니다.");
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -114,8 +114,9 @@ public class Client_DAO {
 				ppst.setString(1, phone);
 				ppst.setString(2, id);
 				ppst.execute();
+				System.out.println("정보수정이 완료되었습니다.");
 			} catch (Exception e) {
-				// TODO: handle exception
+				System.out.println("정보수정을 다시 해주시기 바랍니다.");
 			} finally {
 				try {
 					if (ppst != null)
