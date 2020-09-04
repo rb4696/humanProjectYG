@@ -25,7 +25,7 @@ public class TourINFImpl_Test {
 
 	@Test
 	public void clientlistTest() {
-		t.clientlist();
+		t.clientlist();//
 	}
 	
 	@Test
