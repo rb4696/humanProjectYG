@@ -36,6 +36,8 @@ public class TourINFImpl_Test {
 	@Test
 	public void sign_inTest() {
 		t.sign_in();
+		//
+		
 	}
 	
 	@Test
