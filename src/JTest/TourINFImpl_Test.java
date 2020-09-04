@@ -69,4 +69,9 @@ public class TourINFImpl_Test {
 	public void selecthotTest() {
 		t.selecthot();
 	}
+	
+	@Test
+	public void selectSoldOut() {
+		t.selectSoldOut();
+	}
 }

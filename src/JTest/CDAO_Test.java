@@ -33,16 +33,16 @@ public class CDAO_Test {
 	
 	@Test
 	public void insertTest() {
-		cdao.insertOne("test", "park", "010-2323-4453", "D");
+		cdao.insertOne("test11", "leekin", "010-1313-2253", "C");
 	}
 	
 	@Test
 	public void UpdateTest() {
-		cdao.updateOne("010-0000-0000","yk" );
+		cdao.updateOne("010-0000-0000","test11" );
 	}
 	
 	@Test
 	public void DeleteTest() {
-		cdao.deleteOne("yk");
+		cdao.deleteOne("test11");
 	}
 }

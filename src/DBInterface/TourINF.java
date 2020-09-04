@@ -6,6 +6,7 @@ public interface TourINF {
 	public void deletesite();
 	public void clientlist();
 	public void tourlistall();
+	public void selectSoldOut();
 	
 	// È¸¿ø
 	public void sign_in();

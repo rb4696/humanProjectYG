@@ -33,7 +33,7 @@ public class Yg_Tour {
 
 	private void member() {
 		int selnum = -1;
-		while (selnum < 7) {
+		while (selnum < 8) {
 			membermenu();
 			selnum = in.nextInt();
 			in.nextLine();
@@ -48,15 +48,18 @@ public class Yg_Tour {
 				siteall();
 				break;
 			case 4:
-				goodsbuy();
+				hotsite();
 				break;
 			case 5:
-				goodsmod();
+				goodsbuy();
+				break;
 			case 6:
+				goodsmod();
+			case 7:
 				memberdelete();
 				break;
-			case 7:
-				selnum = 7;
+			case 8:
+				selnum = 8;
 				break;
 			default:
 			}
@@ -93,7 +96,7 @@ public class Yg_Tour {
 		System.out.println("1. 회원가입");
 		System.out.println("2. 정보수정하기 단, 핸드폰번호만 수정가능!");
 		System.out.println("3. 여행상품목록보기");
-		System.out.println("4.");
+		System.out.println("4. 인기여행상품보기");
 		System.out.println("5. 여행상품구매하기");
 		System.out.println("6. 여행상품변경하기");
 		System.out.println("7. 탈퇴하기");
@@ -117,7 +120,7 @@ public class Yg_Tour {
 				tourlist();
 				break;
 			case 4:
-				hotsite();
+				soldoutsite();
 				break;
 			case 5:
 				insertsite();
@@ -126,7 +129,7 @@ public class Yg_Tour {
 				deletesite();
 				break;
 			case 7:
-				selnum = 6;
+				selnum = 7;
 				break;
 			default:
 			}
@@ -134,9 +137,23 @@ public class Yg_Tour {
 
 	}
 
+	private void managemenu() {
+		System.out.println("=== 원하는 서비스를 선택해주세요. ===");
+		System.out.println("1. 회원리스트보기");
+		System.out.println("2. 여행지현황보기");
+		System.out.println("3. 상품별 현황보기");
+		System.out.println("4. 판매완료상품보기");
+		System.out.println("5. 여행지 추가하기");
+		System.out.println("6. 여행지 삭제하기");
+		System.out.println("7. 종료하기");
+	}
+	
+	private void soldoutsite() {
+		timp.selectSoldOut();
+	}
+
 	private void hotsite() {
-		// TODO Auto-generated method stub
-		
+		timp.selecthot();
 	}
 
 	private void tourlist() {
@@ -155,15 +172,6 @@ public class Yg_Tour {
 		timp.clientlist();
 	}
 
-	private void managemenu() {
-		System.out.println("=== 원하는 서비스를 선택해주세요. ===");
-		System.out.println("1. 회원리스트보기");
-		System.out.println("2. 여행지현황보기");
-		System.out.println("3. 상품별 현황보기");
-		System.out.println("4. 여행지 추가하기");
-		System.out.println("5. 여행지 삭제하기");
-		System.out.println("6. 종료하기");
-	}
 
 	private void menu() {
 		System.out.println("=== 이용하실 서비스를 선택해주세요. ===");

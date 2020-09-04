@@ -39,7 +39,7 @@ public class TDAO_Test {
 	
 	@Test
 	public void UpdateTest() {
-		tdao.Update(1, "jeju_do", "korea", "bbb");
+		tdao.Update(1, "jeju_do", "korea", "aaa");
 	}
 	
 	@Test
