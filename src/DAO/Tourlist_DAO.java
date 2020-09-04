@@ -78,7 +78,7 @@ private Tourlist_DAO(){
 	}
 	
 	public void insertOne(String id, int no, String name, String loca) {
-		String sql = "insert into site values (seq_tourlist.nextval, ?, ?, ?, ?)";
+		String sql = "insert into tourlist values (seq_tourlist.nextval, ?, ?, ?, ?)";
 		PreparedStatement ppst = null;
 		if (conn() != null) {
 			try {
@@ -90,17 +90,40 @@ private Tourlist_DAO(){
 				ppst.execute();
 				System.out.println("여행상품이 주문되었습니다.");
 			} catch (Exception e) {
-				// TODO: handle exception
+				e.printStackTrace();
+				System.out.println("여행상품 주문에 실패하였습니다.");
 			} finally {
 				try {
 					if (ppst != null)
 						ppst.close();
 					if (conn != null)
 						conn.close();
-					// System.out.println("DB연결을 종료합니다.");
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	public void Update(int no, String name, String loca, String id) {
+		String sql = "update tourlist set no=?,name=?,loca=? where id =?";
+		PreparedStatement ppst = null;
+		if(conn() != null) {
+			try {
+				ppst = conn.prepareStatement(sql);
+				ppst.setInt(1, no);
+				ppst.setString(2, name);
+				ppst.setString(3, loca);
+				ppst.setString(4, id);
+				ppst.executeUpdate();
+				System.out.println("여행정보가 수정되었습니다.");
+			} catch (Exception e) {
+				// TODO: handle exception
+			}finally {
+				try {
+					
+				} catch (Exception e2) {
+					// TODO: handle exception
 				}
 			}
 		}

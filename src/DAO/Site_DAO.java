@@ -117,7 +117,7 @@ public class Site_DAO {
 		return tempList;
 	}
 	
-	public ArrayList<Site_DTO> selectSod() {
+	public ArrayList<Site_DTO> selectSoldOut() {
 		String sql = "select * from site where cnt = 0";
 		Statement st = null;// 정적쿼리문
 		rs = null;
