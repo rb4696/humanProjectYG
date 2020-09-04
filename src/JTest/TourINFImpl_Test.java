@@ -30,7 +30,7 @@ public class TourINFImpl_Test {
 	
 	@Test
 	public void tourlistallTest() {
-		t.tourlistall();
+		t.tourlistall();//
 	}
 	
 	@Test
