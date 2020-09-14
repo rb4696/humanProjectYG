@@ -78,7 +78,7 @@ public class Client_DAO {
 	}
 
 	public void insertOne(String id, String name, String phone, String grade) {
-		String sql = "insert into client values (seq_client.nextval, ?, ?, ?, ?)";
+		String sql = "insert into client values (seq_client.nextval, ?, ?, ?, default)";
 		PreparedStatement ppst = null;
 		if (conn() != null) {
 			try {
@@ -86,7 +86,6 @@ public class Client_DAO {
 				ppst.setString(1, id);
 				ppst.setString(2, name);
 				ppst.setString(3, phone);
-				ppst.setString(4, grade);
 				ppst.execute();
 				System.out.println("가입이 완료되었습니다.");
 			} catch (Exception e) {

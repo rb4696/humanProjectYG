@@ -7,6 +7,7 @@ public interface TourINF {
 	public void clientlist();
 	public void tourlistall();
 	public void selectSoldOut();
+	public void goodsmod();
 	
 	// È¸¿ø
 	public void sign_in();
@@ -15,6 +16,6 @@ public interface TourINF {
 	public void siteall();
 	public void selecthot();
 	public void goodsbuy();
-	public void goodsmod();
+	public void buymod();
 	
 }

@@ -54,7 +54,8 @@ public class Yg_Tour {
 				goodsbuy();
 				break;
 			case 6:
-				goodsmod();
+				buymod();
+				break;
 			case 7:
 				memberdelete();
 				break;
@@ -105,7 +106,7 @@ public class Yg_Tour {
 
 	private void manage() {
 		int selnum = -1;
-		while (selnum < 7) {
+		while (selnum < 8) {
 			managemenu();
 			selnum = in.nextInt();
 			in.nextLine();
@@ -126,10 +127,13 @@ public class Yg_Tour {
 				insertsite();
 				break;
 			case 6:
-				deletesite();
+				goodsmod();
 				break;
 			case 7:
-				selnum = 7;
+				deletesite();
+				break;
+			case 8:
+				selnum = 8;
 				break;
 			default:
 			}
@@ -144,10 +148,15 @@ public class Yg_Tour {
 		System.out.println("3. 상품별 현황보기");
 		System.out.println("4. 판매완료상품보기");
 		System.out.println("5. 여행지 추가하기");
-		System.out.println("6. 여행지 삭제하기");
-		System.out.println("7. 종료하기");
+		System.out.println("6. 여행가격 수정하기");
+		System.out.println("7. 여행지 삭제하기");
+		System.out.println("8. 종료하기");
 	}
-	
+
+	private void buymod() {
+		timp.buymod();
+	}
+
 	private void soldoutsite() {
 		timp.selectSoldOut();
 	}
@@ -171,7 +180,6 @@ public class Yg_Tour {
 	private void clientlist() {
 		timp.clientlist();
 	}
-
 
 	private void menu() {
 		System.out.println("=== 이용하실 서비스를 선택해주세요. ===");

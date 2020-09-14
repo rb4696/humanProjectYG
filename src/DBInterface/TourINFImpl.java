@@ -194,4 +194,21 @@ public class TourINFImpl implements TourINF {
 		
 	}
 
+	@Override
+	public void buymod() {
+		siteall();
+		System.out.println("여행상품변경서비스입니다.");
+		System.out.println("회원님의 id를 입력해주세요.");
+		String id = in.nextLine();
+		System.out.println("원하시는 여행상품의 번호를 입력해주세요.");
+		int no = in.nextInt();
+		in.nextLine();
+		System.out.println("원하시는 여행상품의 이름을 입력해주세요.");
+		String name = in.nextLine();
+		System.out.println("원하시는 여행국가를 입력해주세요.");
+		String loca = in.nextLine();
+		tdao.Update(no, name, loca, id);
+		System.out.println("여행상품 변경이 완료되었습니다.");
+	}
+
 }
